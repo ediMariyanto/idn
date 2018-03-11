@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.edimariyanto491.idn_workshop.databinding.ActivityDataBindingBinding;
+import com.edimariyanto491.idn_workshop.model.Peserta;
 
 public class DataBinding extends AppCompatActivity {
 
@@ -12,7 +13,8 @@ public class DataBinding extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
-        binding.btn1
+        Peserta p = new Peserta("Edi","30","jakarta");
+        binding.setPesertas(p);
 
     }
 }
